@@ -5,20 +5,20 @@
 class KubectlWhatif < Formula
   desc "Kubernetes cost and performance what-if simulator"
   homepage "https://github.com/tochemey/kubewise"
-  version "0.1.0-alpha"
+  version "0.1.0-beta.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tochemey/kubewise/releases/download/v0.1.0-alpha/kubectl-whatif_0.1.0-alpha_darwin_amd64.tar.gz"
-      sha256 "5514989a9f35ba094f991c28891ee9d935842628a2567f3004ab0d45ab19ace1"
+      url "https://github.com/tochemey/kubewise/releases/download/v0.1.0-beta.1/kubectl-whatif_0.1.0-beta.1_darwin_amd64.tar.gz"
+      sha256 "bc044ad6e8b958fe3382f1f8c1b1963e956e44eb84db702fae8d751a315bf1a1"
 
       define_method(:install) do
         bin.install "kubectl-whatif"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tochemey/kubewise/releases/download/v0.1.0-alpha/kubectl-whatif_0.1.0-alpha_darwin_arm64.tar.gz"
-      sha256 "48acfda437fa05c4f5f59fbd37e1fef750a70abf2cc4737fa153f9ac37b35c43"
+      url "https://github.com/tochemey/kubewise/releases/download/v0.1.0-beta.1/kubectl-whatif_0.1.0-beta.1_darwin_arm64.tar.gz"
+      sha256 "09501284b94d460dbc9ecd7d8608a91ea51a78df235489789d80717602fe3598"
 
       define_method(:install) do
         bin.install "kubectl-whatif"
@@ -28,15 +28,15 @@ class KubectlWhatif < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tochemey/kubewise/releases/download/v0.1.0-alpha/kubectl-whatif_0.1.0-alpha_linux_amd64.tar.gz"
-      sha256 "955e4d82e741dfa61e48f22443c7a501fe65f5d469331a2c8e7849460093b543"
+      url "https://github.com/tochemey/kubewise/releases/download/v0.1.0-beta.1/kubectl-whatif_0.1.0-beta.1_linux_amd64.tar.gz"
+      sha256 "95291601fd1ed1d0770f88258548f5b7199adb108ef6684ed07c7d2487e1fac4"
       define_method(:install) do
         bin.install "kubectl-whatif"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tochemey/kubewise/releases/download/v0.1.0-alpha/kubectl-whatif_0.1.0-alpha_linux_arm64.tar.gz"
-      sha256 "b61fe5c1488990e504ca08ec9c48fe96ba870ec17b79b64458b0b718070a6bd0"
+      url "https://github.com/tochemey/kubewise/releases/download/v0.1.0-beta.1/kubectl-whatif_0.1.0-beta.1_linux_arm64.tar.gz"
+      sha256 "68f6b20f3701b9ab35573c468f0da94abb57e991884839bdb5a2ea593ea9e6c2"
       define_method(:install) do
         bin.install "kubectl-whatif"
       end
